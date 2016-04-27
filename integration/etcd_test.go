@@ -26,7 +26,7 @@ func (s *EtcdSuite) SetUpSuite(c *check.C) {
 	s.createComposeProject(c, "etcd")
 	s.composeProject.Start(c)
 
-	time.Sleep(3000 * time.Millisecond)
+	time.Sleep(5000 * time.Millisecond)
 
 	etcd.Register()
 	kv, err := libkv.NewStore(
